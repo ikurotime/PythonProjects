@@ -13,6 +13,6 @@ with open("./Input/Letters/starting_letter.txt") as letter:
     content = letter.read()
 
 for name in list_names:
-    with open(f"./Output/ReadyToSend/letter_for_{name}.txt", mode="w") as new_letter:
+    with open(f"./Output/ReadyToSend/letter_for_{name.strip()}.txt", mode="w") as new_letter:
         new_letter.write(content.replace("[name]",name.strip()))
 
