@@ -25,12 +25,10 @@ while len(guessed_states) < 50:
     #Comprueba cada estado en la lista
     for state in data.state:
         if answer_state.title() == "Exit":
-            missing_states = []
-            for state in data.state:
-                if state not in guessed_states:
-                    missing_states.append(state)
-        new_data = pandas.DataFrame(missing_states)
-        new_data.to_csv("states_to_learn")
+            missing_states = [state for state in data.state if state not in guessed_states]
+            new_data = pandas.DataFrame(missing_states)
+            new_data.to_csv("states_to_learn.csv.csv")
+            exit()
         #Si el estado escrito coincide con alguno de la lista, registra su nombre y coordenadas
         if answer_state.title() == state:
             state_data = data[data["state"] == f"{answer_state.title()}"]
