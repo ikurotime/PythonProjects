@@ -1,3 +1,4 @@
+import math
 from tkinter import *
 
 # ---------------------------- CONSTANTS ------------------------------- #
@@ -9,24 +10,54 @@ FONT_NAME = "Courier"
 WORK_MIN = 1
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
-
+reps = 0
+timer = None
 # ---------------------------- TIMER RESET ------------------------------- # 
 def reset_timer():
-    count_down(0)
+    window.after_cancel(timer)
+    canvas.itemconfig(timer_text,text= '00:00')
+    timer_label.config(text= 'Timer')
+    check_label.config(text= '')
+    global reps
+    reps = 0
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 def start_timer():
-    count_down(WORK_MIN * 60)
+    global reps
+    reps += 1
+    work_sec= WORK_MIN * 60
+    short_break_sec = SHORT_BREAK_MIN * 60
+    long_break_sec = LONG_BREAK_MIN * 60
+
+    if reps % 2 == 0:
+        count_down(short_break_sec)
+        timer_label.config(text='Break', fg= PINK)
+    elif reps % 8 == 0:
+        count_down(long_break_sec)
+        timer_label.config(text='Break', fg= RED)
+
+    else:
+        count_down(work_sec)
+        timer_label.config(text='Work', fg= GREEN)
+
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 def count_down(count):
     minutes = count // 60
     seconds = count % 60
-    if seconds == 0:
-        seconds = '00'
+    global timer
+    if int(seconds) < 10:
+        seconds = f'0{seconds}'
     if minutes < 10:
         minutes = f'0{minutes}'
     canvas.itemconfig(timer_text,text= f'{minutes}:{seconds}')
     if count > 0:
-        window.after(1000,count_down, count - 1)
+       timer = window.after(1000,count_down, count - 1)
+    else:
+        start_timer()
+        marks = ''
+        work_sessions = (math.floor(reps/2))
+        for _ in range(work_sessions):
+            marks += '✔'
+            check_label['text'] = marks
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title('Pomodoro')
@@ -43,7 +74,7 @@ canvas.grid(column=1, row=1)
 # Labels
 timer_label = Label(text='Timer', font=(FONT_NAME, 50, "normal"), bg=YELLOW, fg=GREEN)
 timer_label.grid(column=1, row=0)
-check_label = Label(text='✔', fg=GREEN, bg=YELLOW)
+check_label = Label(text='', fg=GREEN, bg=YELLOW)
 check_label.grid(column=1, row=3)
 # Buttons
 button_start = Button(text='Start', command= start_timer, highlightthickness=0)
