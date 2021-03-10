@@ -1,25 +1,31 @@
-#title{
-    background-color: #ff4c68;
+/*Fonts*/
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Montserrat-bold', sans-serif;
 }
-
-h1 {
+h2{
+    font-size: 3rem!important;
+    font-weight: 900 !important;
+}
+h3 {
+    font-weight: 900 !important;
+}
+p{
+    color: #8f8f8f;
+}
+#big-heading{
     font-family: 'Montserrat', sans-serif;
     font-size: 3.5rem!important;
     line-height: 1.5!important;
     font-weight: 900 !important;
 }
-h2{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900 !important;
+#title{
+    background-color: #ff4c68;
 }
-h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900 !important;
-}
+
 .container-fluid{
     padding: 3% 15% !important;
 }
-
+/*NavBar*/
 .navbar{
     padding: 0 0 4.5rem !important;
 }
@@ -45,10 +51,15 @@ h3 {
 .title-image{
     width: 60%!important;
     transform: rotate(25deg);
+    position: absolute;
+    right: 30%;
 }
-
+/*FeaturesBox*/
 #features{
     padding: 7% 15%!important;
+    background-color: white;
+    position: relative;
+
 }
 .feature-box{
     text-align: center;
@@ -89,4 +100,41 @@ h3 {
 .press-logo{
     width: 15%;
     margin: 20px 20px;
+}
+/*Section Pricing*/
+
+#pricing{
+    padding: 100px;
+    text-align: center;
+}
+.pricing-column{
+    padding: 3% 2%;
+}
+/*DownloadSection*/
+#cta{
+    padding: 7% 15%;
+    text-align: center;
+    background-color: #ff4c68;
+}
+.cta-heading{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    color: white;
+
+}
+.download-title{
+    font-size: 3.5rem!important;
+}
+/*Footer*/
+#footer{
+    padding: 3% 2%;
+    background-color: white;
+}
+.footer-box{
+    text-align: center;
+}
+.icons{
+    padding: 20px 10px;
+
 }
