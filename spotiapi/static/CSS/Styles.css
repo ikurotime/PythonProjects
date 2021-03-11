@@ -6,7 +6,9 @@ div.bg-circle-1.bg-circle, div.bg-circle-2.bg-circle, div.bg-circle-3.bg-circle,
 
     background: linear-gradient(0deg,#c6b497,#839b97);
 }
-
+h2,p{
+    text-align: center;
+}
 /*Fuente para brand title e items navbar- tamaño para brand title*/
 .navbar-custom .navbar-brand, .navbar-custom .navbar-nav .nav-item .nav-link
 {
