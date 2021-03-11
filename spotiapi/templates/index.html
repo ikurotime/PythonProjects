@@ -1,44 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - PLAYLIST GENERATOR</title>
-   <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
-
-
-</head>
-
-<body>
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
-        <div class="container"><a class="navbar-brand" href="#">PLAYLIST GENERATOR</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Sign Up</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Log In</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+{% include "header.html" %}
     <header class="masthead text-center text-white">
         <div class="masthead-content">
             <div class="container">
-                <h1 class="masthead-heading mb-0">One Page Wonder</h1>
-                <h2 class="masthead-subheading mb-0">Will Rock Your Socks Off</h2><a class="btn btn-primary btn-xl rounded-pill mt-5" role="button" href="#">Learn More</a></div>
+                <h1 class="masthead-heading mb-0">Create awesome playlists</h1>
+                <h2 class="masthead-subheading mb-0">and enjoy your favorite music</h2><a class="btn btn-primary btn-xl rounded-pill mt-5" role="button" href="#">MAKE A PLAYLIST &nbsp;<i class="fab fa-spotify fa-2x" style="vertical-align: middle;"></i></a></div>
         </div>
         <div class="bg-circle-1 bg-circle"></div>
         <div class="bg-circle-2 bg-circle"></div>
         <div class="bg-circle-3 bg-circle"></div>
         <div class="bg-circle-4 bg-circle"></div>
     </header>
+<div>
     <section>
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-2">
-                    <div class="p-5"><img class="rounded-circle img-fluid" src="/static/img/01.jpg" alt=""></div>
+                    <div class="p-5"><img class="rounded-circle img-fluid" src="" alt=""></div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="p-5">
@@ -49,11 +26,11 @@
             </div>
         </div>
     </section>
-    <section>
+    <section style="background-color: #c6b497">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-1">
-                    <div class="p-5"><img class="rounded-circle img-fluid" src="/static/img/02.jpg" alt=""></div>
+                    <div class="p-5"><img class="rounded-circle img-fluid" src="" alt=""></div>
                 </div>
                 <div class="col-lg-6 order-lg-2">
                     <div class="p-5">
@@ -68,7 +45,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-2">
-                    <div class="p-5"><img class="rounded-circle img-fluid" src="/static/img/03.jpg" alt=""></div>
+                    <div class="p-5"><img class="rounded-circle img-fluid" src="" alt=""></div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="p-5">
@@ -79,11 +56,34 @@
             </div>
         </div>
     </section>
-    <footer class="py-5 bg-black">
-        <div class="container">
-            <p class="text-center text-white m-0 small">Copyright&nbsp;© PLAYLIST GENERATOR 2021</p>
-        </div>
-    </footer>
+</div>
+   <footer class="bg-dark text-center text-white " style="position: relative; bottom: 0; left: 0; right: 0;">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0" style="overflow: hidden;">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/ikurotime" target="_blank" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/ikurotime" target="_blank" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2021 Made by:
+    <a class="text-white" href="">David Huertas</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+    <script src="https://kit.fontawesome.com/3ea53c1d6b.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

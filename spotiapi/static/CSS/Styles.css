@@ -1,3 +1,51 @@
-.potato{
-    font-family: Lato,  serif ;
+/*Header*/
+header.masthead{
+    background: linear-gradient(0deg,#cfd3ce,#839b97);
+}
+div.bg-circle-1.bg-circle, div.bg-circle-2.bg-circle, div.bg-circle-3.bg-circle, div.bg-circle-4.bg-circle{
+
+    background: linear-gradient(0deg,#c6b497,#839b97);
+}
+
+/*Fuente para brand title e items navbar- tamaño para brand title*/
+.navbar-custom .navbar-brand, .navbar-custom .navbar-nav .nav-item .nav-link
+{
+    font-family: 'Asap', sans-serif;
+    font-size: 18px;
+    margin: 0;
+}
+/*tamaño para items navbar*/
+.navbar-custom .navbar-nav .nav-item .nav-link {
+    font-size: 15px;
+}
+/*btn make a playlist*/
+.btn-primary{
+    background-color: #7fcd91;
+    border-color: #7fcd91;
+    padding: 1.2rem 2.7rem;
+}
+.btn-primary:focus, .btn-primary:active, .show>.btn-primary.dropdown-toggle:focus{
+    background-color: #7fcd91 !important;
+    border-color: #7fcd91 !important;
+    box-shadow: none !important;
+}
+.btn-primary:hover{
+    background-color: #71ba7f !important;
+    border-color: #71ba7f !important;
+}
+/*Contact*/
+.contact-form{
+    text-align: left;
+    padding-top: 3%;
+    padding-bottom: 4%;
+}
+.form-control:focus{
+    border-color: #839b97;
+    box-shadow: none;
+}
+#form-container{
+    height: 500px;
+}
+header#contact-header.masthead {
+    padding: 100px 100px;
 }
