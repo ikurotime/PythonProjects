@@ -1,12 +1,14 @@
 import requests
 import spotipy
+import os
 from bs4 import  BeautifulSoup
 from spotipy.oauth2 import SpotifyOAuth
 
 TOP100_ENDPOINT = "https://www.billboard.com/charts/hot-100/"
-CLIENT_ID = '613994df86694aae8b095860b2f7c3d6'
-CLIENT_SECRET = '5dde162a4a7a43eeb7fc84535c250854'
+CLIENT_ID = os.environ.get('CLIENT_ID')
+CLIENT_SECRET = os.environ.get('CLIENT_SECRET')
 REDIRECT_URI = "http://example.com"
+
 SCOPE = "playlist-modify-private"
 MY_ID = 'z78fjpl9pxovyz24s2ucxr2d5'
 
